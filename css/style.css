@@ -46,6 +46,7 @@ main .card-photo{
     width: 300px;
     background-color: #fff;
     padding: 18px;
+    position: relative;
 }
 
 main .photo{
@@ -58,4 +59,11 @@ main .photo{
 main .card-photo h3{
     font-weight: 100;
     font-size: 1rem;
+}
+
+main img.pin-photo{
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
 }
