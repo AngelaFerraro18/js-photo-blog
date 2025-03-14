@@ -86,4 +86,5 @@ main p.error{
     border-radius: 10px;
     color: #fff;
     border: 2px solid #fff;
+    margin: 0 15px;
 }
