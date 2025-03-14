@@ -35,3 +35,7 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
         photoContainerElement.innerHTML = itemPhoto;
       
     })
+    .catch(error =>{
+        //con innerHTML vado ad inserire un paragrafo dove comunico all'utente che si è verificato un errore
+        photoContainerElement.innerHTML = `<p class="error">Ops, ci deve essere stato un errore!  <i class="fa-regular fa-face-frown"></i></p>`
+    })
