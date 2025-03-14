@@ -6,6 +6,19 @@
     box-sizing: border-box;
 }
 
+/* Common */
+
+body{
+    background-image: url(../img/cork.png);
+    font-family: "Sometype Mono", monospace;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
 
 /* header */
 
@@ -13,11 +26,33 @@ header {
     font-family: "Edu TAS Beginner", sans-serif;
     padding: 35px 0;
     background-image: url(../img/wall.png);
-    background-size: cover;
+    margin-bottom: 50px;
 }
 
 header h1{
     text-transform: uppercase;
     text-align: center;
     font-size: 2.5rem;
+}
+
+/* main */
+
+main .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main .card-photo{
+    width: 300px;
+    background-color: #fff;
+    padding: 18px;
+}
+
+main .photo{
+    width: 265px;
+    height: 265px;
+    margin-bottom: 18px;
+    background-color: red;
+
 }
