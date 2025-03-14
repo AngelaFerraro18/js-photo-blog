@@ -1,1 +1,40 @@
-console.log('ciao');
+//salvo in una variabile il valore dell'elemento container dell'html dove andrò a inserire le cards
+const photoContainerElement = document.querySelector('.container');
+console.log(photoContainerElement);
+
+//integrato axios procedo con la chiamata all'api fornita
+axios.get('https://lanciweb.github.io/demo/api/pictures/')
+    .then(response =>{
+        // console.log(response);
+        // console.log(response.data);
+        // console.log(response.data[0]);
+        // console.log(response.data[0].url);
+
+        //creo una variabile con valore: stringa vuota dove andrò a inserire l'html da aggiungere al dom
+        let itemPhoto = '';
+
+        //salvo in una variabile il valore che mi identifica l'array che contiene gli oggetti forniti dall'api
+        const   photoArray = response.data;
+
+        //essendo un array uso il metodo forEach per iterare sugli elementi 
+        photoArray.forEach(element => {
+
+            //salvo in una variabile il valore che mi individua l'elemento url 
+            const urlImage = element.url;
+           
+            //con la concatenazione faccio in modo di creare la parte di html da inserire nel dom 
+            itemPhoto += `<div class="card-photo">
+                <div class="photo">
+                    <img class="img-photo" src="${urlImage}" alt="img-placehoder-my-dog">
+                </div>
+                <h3> Repudiandae, odio asperiores consequuntur nisi minus excepturi rerum dolorum!</h3>
+                <img class="pin-photo" src="img/pin.svg" alt="red-pin">
+            </div>`;
+            // console.log(itemPhoto);
+            
+        });
+
+        //per mezzo di innerHTML inserisco gli elementi html creati in itemPhoto
+        photoContainerElement.innerHTML = itemPhoto;
+      
+    })
