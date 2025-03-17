@@ -54,7 +54,7 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
 
         //avendo ricavato una NodeList(che è simile ad un array) per applicare l'evento del click sulla card uso il forEach per selezionare gli elementi della NodeList ricavata precedentemente
         itemPhotoElement.forEach(item =>{
-           
+            
             item.addEventListener('click', function(){
                 //rimuovo la classe d-none per permettere la visualizzazione dell'overlay
                 overlayElement.classList.remove('d-none');
@@ -74,6 +74,8 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
         //creo l'evento del click sul pulsante dell'overlay per farsì che la classe d-none venga applicata di nuovo
         buttonOverlayElement.addEventListener('click', function () {
             overlayElement.classList.add('d-none');
+            imgOverlayElement.src = '';
+            imgOverlayElement.alt = '';
         })
 
     })
