@@ -79,6 +79,19 @@ main .photo img.img-photo{
     height: 100%;
 }
 
+main .card-photo span{
+    font-family: "Sometype Mono", monospace;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #6e6b6b;
+}
+
+main .card-photo h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 main p.error{
     font-size: 2.5rem;
     background-color: #e53c44;
