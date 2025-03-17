@@ -1,0 +1,7 @@
+@media screen and (max-width: 576px){
+
+    #overlay img{
+        width: 400px;
+        height: 400px;
+    }
+}
