@@ -28,6 +28,10 @@ img{
     display: none;
 }
 
+.d-overflow{
+    overflow: hidden;
+}
+
 /* header */
 
 header {
@@ -47,7 +51,7 @@ header h1{
 main .container{
     max-width: 950px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
 main .card-photo{
@@ -137,24 +141,7 @@ main .card-photo:hover img.pin-photo{
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* errore */
 
 main p.error{
     font-size: 2.5rem;
