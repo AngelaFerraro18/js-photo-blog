@@ -45,19 +45,16 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
 
         //per mezzo di innerHTML inserisco gli elementi html creati in itemPhoto
         photoContainerElement.innerHTML = itemPhoto;
-        // console.log(itemPhoto);
-
+        
         //salvo in una variabile l'elemento che mi comprende tutto l'elemento card
         const itemPhotoElement = document.querySelectorAll('.card-photo');
-        console.log(itemPhotoElement);
 
        //salvo in una variabile l'elemento immagine dell'overlay
         const imgOverlayElement = document.getElementById('image-overlay');
-        console.log(imgOverlayElement);
 
         //avendo ricavato una NodeList(che è simile ad un array) per applicare l'evento del click sulla card uso il forEach per selezionare gli elementi della NodeList ricavata precedentemente
         itemPhotoElement.forEach(item =>{
-            console.log(item);
+           
             item.addEventListener('click', function(){
                 //rimuovo la classe d-none per permettere la visualizzazione dell'overlay
                 overlayElement.classList.remove('d-none');
@@ -70,7 +67,7 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
 
                 //vado a modificare il contenuto di alt dell'immagine di overlay con quello dell'immagine cliccata
                 imgOverlayElement.alt = imageClicked.alt;
-                console.log(imgOverlayElement.alt);
+                
             })
         })
 
