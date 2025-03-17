@@ -4,6 +4,14 @@ const photoContainerElement = document.querySelector('.container');
 //creo una variabile con valore: stringa vuota dove andrò a inserire l'html da aggiungere al dom
 let itemPhoto = '';
 
+//creo una variabile dove salvo il valore dell'elemento btn dell'overlay
+const buttonOverlayElement = document.getElementById('btn-overlay');
+console.log(buttonOverlayElement);
+
+//creo una variabile dove salvo il valore del div overlay
+const overlayElement = document.getElementById('overlay');
+console.log(overlayElement);
+
 //integrato axios procedo con la chiamata all'api fornita
 axios.get('https://lanciweb.github.io/demo/api/pictures/')
     .then(response => {
@@ -37,9 +45,32 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
 
         //per mezzo di innerHTML inserisco gli elementi html creati in itemPhoto
         photoContainerElement.innerHTML = itemPhoto;
+        // console.log(itemPhoto);
+
+        //salvo in una variabile l'elemento che mi comprende tutto l'elemento card
+        const itemPhotoElement = document.querySelectorAll('.card-photo');
+        console.log(itemPhotoElement);
+
+        //avendo ricavato una NodeList(che è simile ad un array) per applicare l'evento del click sulla card uso il forEach per selezionare gli elementi della NodeList ricavata precedentemente
+        itemPhotoElement.forEach(item =>{
+            item.addEventListener('click', function(){
+                //rimuovo la classe d-none per permettere la visualizzazione dell'overlay
+                overlayElement.classList.remove('d-none');
+            })
+        })
+
+        //creo l'evento del click sul pulsante dell'overlay per farsì che la classe d-none venga applicata di nuovo
+        buttonOverlayElement.addEventListener('click', function () {
+            overlayElement.classList.add('d-none');
+        })
 
     })
     .catch(error => {
         //con innerHTML vado ad inserire un paragrafo dove comunico all'utente che si è verificato un errore
         photoContainerElement.innerHTML = `<p class="error">Ops, ci deve essere stato un errore!  <i class="fa-regular fa-face-frown"></i></p>`
     })
+   
+
+
+
+
