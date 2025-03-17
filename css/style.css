@@ -24,6 +24,10 @@ img{
     display: block;
 }
 
+.d-none{
+    display: none;
+}
+
 /* header */
 
 header {
@@ -118,9 +122,14 @@ main .card-photo h3{
     padding: 10px;
 }
 
-.d-none{
-    display: none;
+
+/* hover */
+
+main .card-photo:hover{
+    transform: rotate(10deg);
+    z-index: 2;
 }
+
 
 
 
