@@ -129,7 +129,11 @@ main .card-photo:hover{
     transform: rotate(10deg) scale(1.1);
     box-shadow: 5px 7px 8px #00000089;
     z-index: 2;
+    transition: all 0.4s ease;
+    cursor: pointer;
 }
+
+
 
 
 
