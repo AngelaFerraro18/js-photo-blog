@@ -133,6 +133,10 @@ main .card-photo:hover{
     cursor: pointer;
 }
 
+main .card-photo:hover img.pin-photo{
+    display: none;
+}
+
 
 
 
