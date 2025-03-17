@@ -126,7 +126,8 @@ main .card-photo h3{
 /* hover */
 
 main .card-photo:hover{
-    transform: rotate(10deg);
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 5px 7px 8px #00000089;
     z-index: 2;
 }
 
