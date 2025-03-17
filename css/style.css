@@ -118,6 +118,10 @@ main .card-photo h3{
     padding: 10px;
 }
 
+.d-none{
+    display: none;
+}
+
 
 
 
